@@ -8,7 +8,7 @@
     {% for p in pizzas %}
 
     <li> 
-        {{ p }}
+        <a href="{% url 'MainPizza:pizza' p.id %}">{{ p }}</a>
 
     </li>
     {% empty %}
