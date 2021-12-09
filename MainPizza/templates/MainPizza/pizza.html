@@ -15,5 +15,7 @@
     <li> There are no toppings on this pizza yet.</li>
     {% endfor %}
 </ul>
-
+<p>
+<a href="{% url 'MainPizza:new_topping' pizza.id %}">Add a new topping</a>
+</p>
 {% endblock content %}

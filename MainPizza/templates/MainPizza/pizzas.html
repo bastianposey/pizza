@@ -9,11 +9,12 @@
 
     <li> 
         <a href="{% url 'MainPizza:pizza' p.id %}">{{ p }}</a>
-
     </li>
     {% empty %}
     <li>No pizzas have been added yet.</li>
     {% endfor %}
 </ul>
+
+<a href="{% url 'MainPizza:new_pizza' %}">Add a new Pizza</a>
 
 {% endblock content %}
