@@ -15,7 +15,20 @@
     <li> There are no toppings on this pizza yet.</li>
     {% endfor %}
 </ul>
+
+<p>Comments:</p>
+<ul>
+    {% for c in comments %}
+    <li>
+        <p>{{ c.text }}</p>
+        <p>{{c.date_add |date:'M d, Y H:i'}}</p> 
+    </li>
+    {% empty %}
+    <li> There are no comments on this pizza yet.</li>
+    {% endfor %}
+</ul>
+
 <p>
-<a href="{% url 'MainPizza:new_topping' pizza.id %}">Add a new topping</a>
+    <a href="{% url 'MainPizza:new_comment' pizza.id %}">Add a new comment</a>
 </p>
 {% endblock content %}

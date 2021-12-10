@@ -1,14 +1,9 @@
 from django import forms
-from .models import Pizza, Topping
+from .models import Comment, Pizza, Topping
 
-class PizzaForm(forms.ModelForm):
-    class Meta:
-        model = Pizza
-        fields = ['text']
-        labels = {'text': ''}
 
-class ToppingForm(forms.ModelForm):
+class CommentForm(forms.ModelForm):
     class Meta:
-        model = Topping
+        model = Comment
         fields = ['text']
         labels = {'text':''}
