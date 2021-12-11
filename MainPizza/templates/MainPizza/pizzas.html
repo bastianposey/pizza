@@ -1,18 +1,18 @@
 {% extends "MainPizza/base.html" %}
 
+{% block page_header %}
+    <h1>Pizzas</h1>
+{% endblock page_header %}
+
 {% block content %}
-
-<p>pizzas</p>
-
 <ul>
-    {% for p in pizzas %}
-
-    <li> 
-        <a href="{% url 'MainPizza:pizza' p.id %}">{{ p }}</a>
-    </li>
-    {% empty %}
-    <li>No pizzas have been added yet.</li>
-    {% endfor %}
+    {% for pizza in pizzas %}
+        <li><h3>
+        <a href="{% url 'MainPizza:pizza' pizza.id %}">{{ pizza }}</a>
+        </h3></li>
+        {% empty %}
+            <li><h3>No Pizzas have been added yet.</h3></li>
+        {% endfor %}
 </ul>
 
 {% endblock content %}

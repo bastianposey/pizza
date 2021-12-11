@@ -1,10 +1,14 @@
 {% extends "MainPizza/base.html" %}
 
-{% block content %}
+{% block page_header %}
+    <div class="jumbotron">
+        <hl class="display-3">Pizzas and their toppings</hl>
 
-<p>Pizzeria</p>
+        <p class="lead">Look at the different types of pizza and toppings there are.
+             You can even leave a comment on your favorite or least favorite pizzas!.</p>
 
-<p>Pizzeria helps you keep track of pizza types and their toppings.</p>
-
-{% endblock content %}
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+            role="button">Register &raquo;</a>
+    </div>
+{% endblock page_header %}
 
